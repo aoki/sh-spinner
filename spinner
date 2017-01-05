@@ -24,14 +24,14 @@ function spinner() {
 
 msg="InProgress"
 task="TaskA"
-sleep 10 & spinner $task $msg
+sleep 2 & spinner $task $msg
 
 msg="InProgress"
 task="TaskB"
-sleep 10 & spinner $task $msg
+sleep 3 & spinner $task $msg
 
 msg="InProgress"
 task="TaskC"
-sleep 10 & spinner $task $msg
+sleep 2 & spinner $task $msg
 
 tput cnorm
