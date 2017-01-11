@@ -22,16 +22,8 @@ function spinner() {
   done
 }
 
-msg="InProgress"
-task="TaskA"
-sleep 2 & spinner $task $msg
-
-msg="InProgress"
-task="TaskB"
-sleep 3 & spinner $task $msg
-
-msg="InProgress"
-task="TaskC"
-sleep 2 & spinner $task $msg
+msg="${2-InProgress}"
+task="${3-$1}"
+$1 & spinner "$task" "$msg"
 
 tput cnorm
